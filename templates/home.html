@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Smart Learner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="gradient-bg">
+  <div class="home-card">
+    <h1>Welcome, {{ name }} 👋</h1>
+    <p>Discover your preferred learning style and course recommendations.</p>
+
+    <a href="{{ url_for('quiz') }}" class="btn-gradient">Start Preference Test</a>
+    <a href="{{ url_for('logout') }}" class="btn-outline">Logout</a>
+  </div>
+</body>
+</html>

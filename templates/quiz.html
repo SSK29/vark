@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preference Test</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Answer the following questions honestly:</h2>
+    <form method="post">
+      <ol>
+        {% for q in questions %}
+          <li>
+            <div class="question-text">{{ q.text }}</div>
+            <label><input type="radio" name="q{{ q.id }}" value="R" required> Read text or documentation</label><br>
+            <label><input type="radio" name="q{{ q.id }}" value="A"> Listen to a lecture</label><br>
+            <label><input type="radio" name="q{{ q.id }}" value="V"> See diagrams or visuals</label><br>
+            <label><input type="radio" name="q{{ q.id }}" value="K"> Try it hands-on</label>
+          </li>
+        {% endfor %}
+      </ol>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
