@@ -85,5 +85,7 @@ def logout():
     session.pop("username", None)
     return redirect(url_for("login"))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    from flask import Flask
+    app.run(host="0.0.0.0", port=8000)
+
