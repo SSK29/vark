@@ -1,0 +1,411 @@
+/* 🌈 GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+/* 🌈 GRADIENT BACKGROUND (for all pages) */
+.gradient-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff5f7e, #7b5cff);
+}
+
+/* 🧱 LOGIN PAGE CARD */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-card {
+  background: #fff;
+  width: 350px;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* 🧠 INPUT FIELDS */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #7b5cff;
+  box-shadow: 0 0 5px rgba(123, 92, 255, 0.3);
+}
+
+/* ⚙️ OPTIONS AND ERRORS */
+.options {
+  text-align: left;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 🔘 BUTTONS */
+button,
+.login-btn,
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff5f7e, #7b5cff);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover,
+.login-btn:hover,
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #7b5cff;
+  border: 2px solid #7b5cff;
+}
+
+.btn-secondary:hover {
+  background: #7b5cff;
+  color: #fff;
+}
+
+/* 🔗 SOCIAL LOGIN */
+.or-text {
+  font-size: 13px;
+  color: #888;
+  margin: 20px 0 10px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  width: 48%;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.fb {
+  background: #3b5998;
+}
+
+.google {
+  background: #db4437;
+}
+
+/* 🧍 SIGNUP FOOTER */
+.signup-text {
+  font-size: 13px;
+  color: #555;
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: #7b5cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* 🏠 HOME PAGE */
+.home-card {
+  background: rgba(255, 255, 255, 0.9);
+  width: 500px;
+  padding: 50px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home-card h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* 🌈 Gradient Button */
+.btn-gradient {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff5f7e, #7b5cff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+  margin: 10px 0;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* 🧾 Outline Button (Logout, Back, etc.) */
+.btn-outline {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 2px solid #7b5cff;
+  color: #7b5cff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #7b5cff;
+  color: #fff;
+  border-color: #7b5cff;
+}
+
+/* 📱 Responsive Home Page */
+@media (max-width: 480px) {
+  .home-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .home-card h1 {
+    font-size: 22px;
+  }
+
+  .btn-gradient, .btn-outline {
+    width: 100%;
+  }
+}
+
+/* 📋 QUIZ PAGE */
+ol {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.question-text {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+label input {
+  margin-right: 6px;
+}
+
+/* 🌈 RESULT PAGE */
+.result-card {
+  background: rgba(255, 255, 255, 0.9);
+  width: 90%;
+  max-width: 550px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeUp 0.6s ease-out;
+}
+
+.result-card h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.result-card h2 {
+  font-size: 20px;
+  color: #7b5cff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.result-card h3 {
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.score-box {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.score-box {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-box h3 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.score-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  text-align: center;  /* Centers text horizontally */
+  width: 100%;
+}
+
+.score-box li {
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+}
+
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn-gradient {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff5f7e, #7b5cff);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-outline {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 25px;
+  border: 2px solid #7b5cff;
+  border-radius: 8px;
+  color: #7b5cff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #7b5cff;
+  color: #fff;
+}
+
+/* ✨ Smooth Entry Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 480px) {
+  .result-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

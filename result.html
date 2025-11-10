@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Learner - Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="gradient-bg">
+  <div class="result-card">
+    <h1>Hello {{ name }}</h1>
+    <h2>Type: {{ learner_type }}</h2>
+    <h3>Dominant Preference(s): {{ dominant }}</h3>
+    <p><strong>Recommended Course Type:</strong> {{ recommended }}</p>
+
+    <div class="score-box">
+      <h3>Score Summary</h3>
+      <ul>
+        {% for key, value in scores.items() %}
+          <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="button-container">
+      <!-- 🎯 Conditional Links Based on Learner Type -->
+      {% if dominant == 'Visual' %}
+        <a href="https://drive.google.com/drive/folders/1w4S2Kx2XT29d8ZSfSqDYQEC7zuFhFg4R?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Visual Resources
+        </a>
+
+      {% elif dominant == 'Auditory' %}
+        <a href="https://drive.google.com/drive/folders/1I0jK4Gs37jZYBPTRCF3PtwEvPedOtzQ-?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Aural Resources
+        </a>
+
+      {% elif dominant == 'Reading' %}
+        <a href="https://drive.google.com/drive/folders/1ujU2gzFSCLuTAzJ87b_DEGcLWhdq8H7M?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Reading/Writing Resources
+        </a>
+
+      {% elif dominant == 'Kinesthetic' %}
+        <a href="https://drive.google.com/drive/folders/1pRYavop6xhoz_F-hvWH7OAwTaarAh_Ia?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Kinesthetic Resources
+        </a>
+
+      {% elif dominant == 'Auditory, Reading' %}
+        <a href="https://drive.google.com/drive/folders/1I0jK4Gs37jZYBPTRCF3PtwEvPedOtzQ-?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Aural Resources
+        </a>
+        <a href="https://drive.google.com/drive/folders/1ujU2gzFSCLuTAzJ87b_DEGcLWhdq8H7M?usp=drive_link" target="_blank" class="btn-gradient">
+          Explore Reading/Writing Resources
+        </a>
+      {% endif %}
+
+      <a href="{{ url_for('home') }}" class="btn-outline">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
